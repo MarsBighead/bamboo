@@ -1,0 +1,138 @@
+@charset "utf-8";
+/* CSS Document */
+
+ #tabsF {
+	  border-bottom:0px;
+	 
+	 
+      }
+
+ul#navmenu li {
+   display: block !important; /*For GOOD browsers*/
+   display: inline; /*For IE*/
+   position: relative;
+}
+
+/* Root Menu */
+ul#navmenu a {
+   padding: 0 3px;
+   display: block;
+   background: #E2E2E2;
+   color: #666;
+   font: 13px/22px; FONT-FAMILY: Arial,宋体;COLOR: #000000;
+   text-decoration: none;
+   height: auto !important;
+ }
+/* Root Menu Hover Persistence */
+ul#navmenu a:hover,
+ul#navmenu li:hover a,
+ul#navmenu li.iehover a {
+background: #CCCCCC;
+   color: #666;
+}
+
+/* 2nd Menu */
+ul#navmenu li:hover li a,
+ul#navmenu li.iehover li a {
+	height:28px;
+   background: #DFDFDF;
+   COLOR: #000000;
+}
+
+/* 2nd Menu Hover Persistence */
+ul#navmenu li:hover li a:hover,
+ul#navmenu li:hover li:hover a,
+ul#navmenu li.iehover li a:hover,
+ul#navmenu li.iehover li.iehover a {
+   background: #CCCCCC;
+   color: #FFF;
+}
+
+/* 3rd Menu */
+ul#navmenu li:hover li:hover li a,
+ul#navmenu li.iehover li.iehover li a {
+   background: #E7E7E7;
+   COLOR: #000000;
+}
+
+/* 3rd Menu Hover Persistence */
+ul#navmenu li:hover li:hover li a:hover,
+ul#navmenu li:hover li:hover li:hover a,
+ul#navmenu li.iehover li.iehover li a:hover,
+ul#navmenu li.iehover li.iehover li.iehover a {
+   background: #CCCCCC;
+   color: #FFF;
+}
+
+/* 4rd Menu */
+ul#navmenu li:hover li:hover li:hover li a,
+ul#navmenu li.iehover li.iehover li.iehover li a {
+   background: #EEEEEE;
+   COLOR: #000000;
+}
+
+/* 4rd Menu Hover Persistence */
+ul#navmenu li:hover li:hover li:hover li a:hover,
+ul#navmenu li:hover li:hover li:hover li:hover a,
+ul#navmenu li.iehover li.iehover li.iehover li a:hover,
+ul#navmenu li.iehover li.iehover li.iehover li.iehover a {
+   background: #CCCCCC;
+   color: #FFF;
+}
+
+
+.ul0{
+	 
+   padding: 0; 
+    list-style-type: none; 
+	height:24px;
+   line-height:24px;
+   list-style-type:none;
+   margin:0;
+   width:80px;
+   text-align:center;
+   float:left;
+   vertical-align:bottom;
+}
+
+.ul1{
+   
+     margin: 0;
+   padding: 0; 
+   border: 0 none;
+   width: 180px; /*For KHTML*/
+   list-style: none;
+   display: none;
+   position: absolute;
+   top: 24px;
+   left: 0px;
+   text-align:left;
+  vertical-align:bottom; 
+}
+.ul2{
+   display: none;
+   position: absolute;
+   top: 0;
+   left: 180px;
+   text-align:left;
+   margin: 0;
+   border: 0 none;
+   padding: 0;
+   width: 180px; /*For KHTML*/
+   list-style: none;
+}
+ul#navmenu li:hover ul ul,
+ul#navmenu li:hover ul ul ul,
+ul#navmenu li.iehover ul ul,
+ul#navmenu li.iehover ul ul ul {
+   display: none;
+}
+
+ul#navmenu li:hover ul,
+ul#navmenu ul li:hover ul,
+ul#navmenu ul ul li:hover ul,
+ul#navmenu li.iehover ul,
+ul#navmenu ul li.iehover ul,
+ul#navmenu ul ul li.iehover ul {
+   display: block;
+}
