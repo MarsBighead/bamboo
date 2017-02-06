@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>   
+<!DOCTYPE document SYSTEM "rml.dtd">   
+<document filename="financial_products.pdf" compression='1'>   
+<docinit>  
+    <color id="BLUE" CMYK="[1,0.67,0,0.23]"/>  
+</docinit>  
+<template pageSize="(595, 842)" leftMargin="72" rightMargin="72" >  
+  
+    <pageTemplate id="head" pageSize="a4 portrait">  
+        <pageGraphics>  
+            <image file="{{STATIC_DIR}}/img/db_logo.jpg" x="50" y="780" width="302" height="53"/>  
+            <fill color="black"/>  
+            <setFont name="song" size="10"/>  
+            <lineMode width="2"/>  
+            <lines>  
+            40 765 555 765  
+            </lines>  
+            <fill color="#ADD8E6"/>  
+            <lineMode width="1" />  
+            <lines>  
+            0 60 595 60  
+            </lines>  
+            <fill color="#778899"/>  
+            <setFont name="song" size="10"/>  
+            <drawString x="235" y="40">客服热线：4006-816-886 </drawString>  
+            <drawString x="450" y="40">当前第<pageNumber countingFrom="1"/>页 / 总共4页</drawString>  
+        </pageGraphics>  
+        <frame id="second" x1="35" y1="85" width="525" height="660"/>  
+    </pageTemplate>  
+</template>  
+  
+<stylesheet>  
+    <initialize>  
+        <alias id="style.normal" value="style.Normal"/>  
+    </initialize>  
+    <paraStyle name="common"  fontName="song" fontSize="12" leading="18" spaceBefore="6" spaceAfter="12" firstLineIndent="0.5in" />  
+    <paraStyle name="alignLeft" alignment="left" fontName="song" fontSize="12" leading="15" spaceBefore="6" spaceAfter="8" firstLineIndent="0.2in" />  
+    <paraStyle name="noIndent" alignment="left" fontName="song" fontSize="12" leading="15" spaceBefore="6" spaceAfter="8" />  
+    <paraStyle name="alignRight" alignment="right"  fontName="song" fontSize="12" leading="15" spaceBefore="6" spaceAfter="12" firstLineIndent="0.5in" />  
+    <paraStyle name="title" fontName="song" fontSize="30" leading="24" spaceBefore="6" spaceAfter="50" alignment="center"/>  
+    <paraStyle name="paddingLeft" alignment="left" fontName="song" fontSize="12" leading="15" spaceBefore="6" spaceAfter="8" firstLineIndent="250" />  
+</stylesheet>  
+  
+<story>  
+<setNextTemplate name="head"/>  
+<para style='title'><b>标题</b></para>  
+<para style="noIndent"><b>甲方：</b></para>  
+<para style="noIndent"></para>  
+<para style="noIndent"><b>乙方：</b></para>  
+<para style="noIndent">某某某公司</para>  
+<para style="noIndent"></para>  
+<para style="alignLeft">本协议为甲方与乙方之间的产品服务合同，双方在签署上述产品合约前，已认真阅读及同意接受合约条款。本合同系双方经平等自愿协商一致，根据《中华人民共和国合同法》等法律、行政法规的规定订立。</para>  
+<para style="noIndent"></para>  
+<para style="alignLeft"><b><u>1. 定义与说明</u></b></para>  
+<para style="alignLeft"><b>1.1</b> 乙方接受甲方的委托和授权，按照与甲方事先约定的投资计划和方式进行投资和资产管理，根据约定条件和实际投资收益情况向甲方支付收益并按约定条件和比例收取管理服务费，投资风险由甲方自行承担。</para>  
+<para style="alignLeft"><b>1.2</b> 在本合同中，除非另有明确说明，否则下列词语具有如下含义：</para>  
+<para style="alignLeft"><b>账户：</b>指乙方为甲方开立的贷帮网账户。</para>  
+<para style="alignLeft">  
+  <b>起息日：</b>指投资收益计算的起始日，即产品合约中约定的起息日。</para>  
+<para style="alignLeft">  
+  <b>到期日：</b>指产品合约中约定的到期日。</para>  
+<para style="alignLeft">  
+  <b>期限：</b>指起息日至到期日或（提前终止日）之间的期限。</para>  
+<para style="alignLeft">  
+  <b>收益：</b>指甲方投资本金在产品期限内产生的收益。</para>  
+<para style="alignLeft">  
+  <b>支付周期：</b>指乙方在甲方提出赎回申请后完成支付所需时间。</para>  
+<para style="alignLeft">  
+  <b>工作日：</b>指乙方对外办理一般业务的任何一天，不包括法定节假日和周六、周日（但包括国家临时规定应当工作的周六或周日）。</para>  
+<para style="alignLeft">  
+  <b>推介期：</b>指乙方计划完成推广本产品所需时间段。 </para>  
+<para style="alignLeft">  
+  <b>封闭期：</b>指乙方受甲方委托完成投资所需的时间段。</para>  
+<para style="alignLeft">  
+  <b>签约日：</b>指双方签署的产品合约中列明的签约日期。</para>  
+  
+<para style="noIndent"></para>  
+<para style="alignLeft"><b><u>2. 声明与保证</u></b></para>  
+<para style="alignLeft">  
+  <b>2.1</b> 双方均分别向另一方声明并保证该方具有完全适当的资格与能力订立、接收及履行本合同以及以其为一方的其他任何有关文件。</para>  
+<para style="noIndent"></para>  
+<para style="noIndent"></para>  
+<para style="noIndent"></para>  
+<para style="paddingLeft">某某公司</para>  
+</para>  
+<para style="paddingLeft">经办人（加盖个人名章或签字）:</para>  
+<image file="{{STATIC_DIR}}/img/common/cachet.gif" x="350" y="350" width="168" height="168"/>  
+</story>  
+</document>
