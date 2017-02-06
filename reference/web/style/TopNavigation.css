@@ -1,0 +1,118 @@
+/*****************************************************************/
+/* Top Menu Navigation Styles */
+/*****************************************************************/
+table.rocheMenuBar {
+	height:25px;
+	width:100%;
+	align:left;
+	border-bottom:1px solid #ffffff;
+	border-left:1px solid #ffffff;
+	border-top-width:0px;
+	border-right-width:0px;
+}
+
+.rocheNavMenuOff {
+        text-align:center;
+        height:25px;
+        align:center;
+        vertical-align:middle;
+        border-right: 1px solid #ffffff;
+        background-color:#BABABA;
+        padding-right:2px;
+        padding-left:2px;
+}
+
+.rocheNavMenuOver {
+        text-align:center;        
+        height:25px;
+        align:center;
+        vertical-align:middle;
+        border-right: 1px solid #ffffff;
+        background-color:#0066CC;
+        padding-right:2px;
+        padding-left:2px;
+}
+
+.rocheNavMenuTabFocus {
+        text-align:center;        
+        height:25px;
+        align:center;
+        vertical-align:middle;
+        border-right: 1px solid #ffffff;
+        background-color:#0066CC;
+        padding-right:2px;
+        padding-left:2px;
+}
+
+.rocheNavMenuLink {        
+        font-family:arial,helvetica,sans serif;
+        font-size:12px;
+        font-weight:normal;
+        text-decoration:none;
+        color:black;
+        letter-spacing:normal;
+}
+
+table.rasMenuBar {
+	height:25px;
+	width:100%;
+	align:left;
+	border-left:1px solid #ffffff;
+	border-top-width:0px;
+	border-bottom-width:0px;
+	border-right-width:0px;
+	padding:0px 0px 0px 0px;
+}
+
+.topNavMenuOff {
+        text-align:center;        
+        height:25px;
+        align:center;
+        vertical-align:middle;
+        border-right: 1px solid #ffffff;
+        border-bottom: 1px solid #ffffff;
+        background-color:#CCCCCC;
+        padding-right:2px;
+        padding-left:2px;        
+}
+.topNavMenuOver {
+        text-align:center;        
+        height:25px;
+        align:center;
+        vertical-align:middle;
+        border-right: 1px solid #ffffff;
+        border-bottom: 1px solid #ffffff;
+        background-color:#0066CC;
+        padding-right:2px;
+        padding-left:2px;
+}
+
+.topNavMenuLink {        
+        font-family:arial,helvetica,sans serif;
+        font-size:11px;
+        font-weight:normal;
+        text-decoration:none;
+        color:black;
+        padding-left:3px;
+        text-align:center;
+        vertical-align:middle;
+}
+
+img.navMenuImage {
+		text-align:middle;
+		vertical-align:middle;
+}
+
+.hotCrumb {
+	height:25px;
+	width:11px;
+	border:solid 1px #BABABA;
+	background-color:#0066CC;
+}
+
+.coolCrumb {
+	height:25px;
+	width:11px;
+	border:solid 1px #BABABA;
+	background-color:#ffffff;
+}

@@ -1,0 +1,44 @@
+	<div id="leftsiderbar">
+        <div id="technology_left">
+            <h1></h1>
+            <dl id="left_top_dl">
+                <dd>
+                <dl>
+                    
+                        <dt><span>我的管理中心</span></dt>
+                        <dd style="display: none;">
+                            <ul>
+                        
+							<%if $smarty.session.role>0%>
+                            <li><a href="project_user.php">我的项目</a></li>
+							<%/if%>
+						
+                            <li><a href="member_info.php">客户信息</a></li>
+                        
+                            <li><a href="member_passwd.php">密码修改</a></li>
+                        
+                            <li><a href="member_order.php">订单查询</a></li>
+                        
+                            <li><a href="downloads.php">资料下载</a></li>
+                        
+                            </ul>
+                        </dd>
+                    
+                        <dt><span>其它</span></dt>
+                        <dd style="display: none;">
+                            <ul>
+
+                            <li><a href="https://mail.geneskies.com/" target="_blank">邮箱登录</a></li>
+                        
+                            <li><a href="http://192.168.1.10:8000" target="_blank">生物信息软件</a></li>
+                        
+                            <li><a href="help.php" target="_blank">帮助说明</a></li>
+                        
+                            </ul>
+                        </dd>
+                                        
+                </dl>
+                </dd>
+            </dl>
+        </div>
+ </div>
