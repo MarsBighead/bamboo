@@ -59,18 +59,18 @@ class PDFUtils(object):
         @param templ 需要渲染的XML文件地址（全路径） 
         @param save_file PDF文件保存的地址（全路径） 
         """  
-        # 读取模板文件  
+        # Read Template file
         template = preppy.getModule(templ)  
-        # 渲染模板文件  
+        # Render template file 
         namespace = {  
             'data': data,  
             'STATIC_DIR': self.STATIC_DIR,  
             }  
-        # 渲染PDF页面  
+        # Render PDF page
         rml = template.getOutput(namespace)  
-        # 生成PDF  
+        # Generate PDF  
         pdf =  trml2pdf.parseString(rml)  
-        # 保存PDF  
+        # Save to PDF  
         open(save_file,'wb').write(pdf)  
         return True  
           

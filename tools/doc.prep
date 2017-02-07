@@ -1,89 +1,93 @@
-<?xml version="1.0" encoding="utf-8" standalone="no" ?>   
-<!DOCTYPE document SYSTEM "rml.dtd">   
-<document filename="financial_products.pdf" compression='1'>   
-<docinit>  
-    <color id="BLUE" CMYK="[1,0.67,0,0.23]"/>  
-</docinit>  
-<template pageSize="(595, 842)" leftMargin="72" rightMargin="72" >  
-  
-    <pageTemplate id="head" pageSize="a4 portrait">  
-        <pageGraphics>  
-            <image file="{{STATIC_DIR}}/img/db_logo.jpg" x="50" y="780" width="302" height="53"/>  
-            <fill color="black"/>  
-            <setFont name="song" size="10"/>  
-            <lineMode width="2"/>  
-            <lines>  
-            40 765 555 765  
-            </lines>  
-            <fill color="#ADD8E6"/>  
-            <lineMode width="1" />  
-            <lines>  
-            0 60 595 60  
-            </lines>  
-            <fill color="#778899"/>  
-            <setFont name="song" size="10"/>  
-            <drawString x="235" y="40">客服热线：4006-816-886 </drawString>  
-            <drawString x="450" y="40">当前第<pageNumber countingFrom="1"/>页 / 总共4页</drawString>  
-        </pageGraphics>  
-        <frame id="second" x1="35" y1="85" width="525" height="660"/>  
-    </pageTemplate>  
-</template>  
-  
-<stylesheet>  
-    <initialize>  
-        <alias id="style.normal" value="style.Normal"/>  
-    </initialize>  
-    <paraStyle name="common"  fontName="song" fontSize="12" leading="18" spaceBefore="6" spaceAfter="12" firstLineIndent="0.5in" />  
-    <paraStyle name="alignLeft" alignment="left" fontName="song" fontSize="12" leading="15" spaceBefore="6" spaceAfter="8" firstLineIndent="0.2in" />  
-    <paraStyle name="noIndent" alignment="left" fontName="song" fontSize="12" leading="15" spaceBefore="6" spaceAfter="8" />  
-    <paraStyle name="alignRight" alignment="right"  fontName="song" fontSize="12" leading="15" spaceBefore="6" spaceAfter="12" firstLineIndent="0.5in" />  
-    <paraStyle name="title" fontName="song" fontSize="30" leading="24" spaceBefore="6" spaceAfter="50" alignment="center"/>  
-    <paraStyle name="paddingLeft" alignment="left" fontName="song" fontSize="12" leading="15" spaceBefore="6" spaceAfter="8" firstLineIndent="250" />  
-</stylesheet>  
-  
-<story>  
-<setNextTemplate name="head"/>  
-<para style='title'><b>标题</b></para>  
-<para style="noIndent"><b>甲方：</b></para>  
-<para style="noIndent"></para>  
-<para style="noIndent"><b>乙方：</b></para>  
-<para style="noIndent">某某某公司</para>  
-<para style="noIndent"></para>  
-<para style="alignLeft">本协议为甲方与乙方之间的产品服务合同，双方在签署上述产品合约前，已认真阅读及同意接受合约条款。本合同系双方经平等自愿协商一致，根据《中华人民共和国合同法》等法律、行政法规的规定订立。</para>  
-<para style="noIndent"></para>  
-<para style="alignLeft"><b><u>1. 定义与说明</u></b></para>  
-<para style="alignLeft"><b>1.1</b> 乙方接受甲方的委托和授权，按照与甲方事先约定的投资计划和方式进行投资和资产管理，根据约定条件和实际投资收益情况向甲方支付收益并按约定条件和比例收取管理服务费，投资风险由甲方自行承担。</para>  
-<para style="alignLeft"><b>1.2</b> 在本合同中，除非另有明确说明，否则下列词语具有如下含义：</para>  
-<para style="alignLeft"><b>账户：</b>指乙方为甲方开立的贷帮网账户。</para>  
-<para style="alignLeft">  
-  <b>起息日：</b>指投资收益计算的起始日，即产品合约中约定的起息日。</para>  
-<para style="alignLeft">  
-  <b>到期日：</b>指产品合约中约定的到期日。</para>  
-<para style="alignLeft">  
-  <b>期限：</b>指起息日至到期日或（提前终止日）之间的期限。</para>  
-<para style="alignLeft">  
-  <b>收益：</b>指甲方投资本金在产品期限内产生的收益。</para>  
-<para style="alignLeft">  
-  <b>支付周期：</b>指乙方在甲方提出赎回申请后完成支付所需时间。</para>  
-<para style="alignLeft">  
-  <b>工作日：</b>指乙方对外办理一般业务的任何一天，不包括法定节假日和周六、周日（但包括国家临时规定应当工作的周六或周日）。</para>  
-<para style="alignLeft">  
-  <b>推介期：</b>指乙方计划完成推广本产品所需时间段。 </para>  
-<para style="alignLeft">  
-  <b>封闭期：</b>指乙方受甲方委托完成投资所需的时间段。</para>  
-<para style="alignLeft">  
-  <b>签约日：</b>指双方签署的产品合约中列明的签约日期。</para>  
-  
-<para style="noIndent"></para>  
-<para style="alignLeft"><b><u>2. 声明与保证</u></b></para>  
-<para style="alignLeft">  
-  <b>2.1</b> 双方均分别向另一方声明并保证该方具有完全适当的资格与能力订立、接收及履行本合同以及以其为一方的其他任何有关文件。</para>  
-<para style="noIndent"></para>  
-<para style="noIndent"></para>  
-<para style="noIndent"></para>  
-<para style="paddingLeft">某某公司</para>  
-</para>  
-<para style="paddingLeft">经办人（加盖个人名章或签字）:</para>  
-<image file="{{STATIC_DIR}}/img/common/cachet.gif" x="350" y="350" width="168" height="168"/>  
-</story>  
+<?xml version="1.0" encoding="iso-8859-1" standalone="no" ?>
+<!DOCTYPE document SYSTEM "rml_1_0.dtd">
+<document filename="example_5.pdf">
+<template pageSize="(21cm, 29.7cm)" leftMargin="2.0cm" rightMargin="2.0cm"
+  topMargin="2.0cm" bottomMargin="2.0cm" title="MarsBighead Report Sample" author="{{data}}" allowSplitting="20">
+    <pageTemplate id="first">
+        <pageGraphics>
+            <lines>2cm 3.2cm 19cm 3.2cm</lines>
+            <drawCentredString x="105mm" y="3.4cm">https://github.com/MarsBighead - 02.07.2017/Shanghai.China - Toger.Me</drawCentredString>
+            <drawCentredString x="105mm" y="2.6cm">  Generate Data-{{data}} , hbu@localhost</drawCentredString>
+            <drawCentredString x="105mm" y="2.0cm"> Python tools in directory {{STATIC_DIR}} - Author:Bighead</drawCentredString>
+            <image x="23mm" y="23cm" file="pict/devis_logo.jpg"/>
+
+            <setFont name="Helvetica" size="135"/>
+            <fill color="(1,0.9,0.9)"/>
+            <stroke color="(1,0.9,0.9)"/>
+            <translate dx="15cm" dy="-5.5cm"/>
+            <rotate degrees="50"/>
+            <drawString x="23mm" y="12.7cm">DRAFT</drawString>
+            <lineMode width="5mm"/>
+            <rect round="1cm" x="18mm" y="12.2cm" width="17cm" height="5cm" fill="no" stroke="yes"/>
+
+        </pageGraphics>
+        <frame id="address" x1="11.2cm" y1="21.0cm" width="8cm" height="4.2cm"/>
+        <frame id="column" x1="2.0cm" y1="7.0cm" width="17cm" height="14cm"/>
+    </pageTemplate>
+</template>
+<stylesheet>
+    <blockTableStyle id="products">
+         <blockFont name="Helvetica-BoldOblique" size="24" start="0,0" stop="-1,0"/>
+         <blockBackground colorName="grey" start="0,0" stop="-1,0"/>
+         <blockTextColor colorName="white" start="0,0" stop="-1,0"/>
+         <blockValign value="TOP"/>
+         <blockAlignment value="RIGHT" start="1,0" stop="-1,-1"/>
+         <blockAlignment value="RIGHT" start="0,-3" stop="-1,-1"/>
+         <lineStyle kind="LINEBELOW" colorName="black" start="0,0" stop="-1,0"/>
+         <lineStyle kind="LINEABOVE" colorName="black" start="-1,-3" stop="-1,-3"/>
+         <lineStyle kind="LINEABOVE" colorName="black" start="-1,-1" stop="-1,-1"/>
+         <lineStyle kind="LINEBELOW" colorName="black" start="-1,-1" stop="-1,-1"/>
+         <lineStyle kind="LINEBEFORE" colorName="black" start="-1,-1" stop="-1,-1"/>
+         <lineStyle kind="LINEAFTER" colorName="black" start="-1,-1" stop="-1,-1"/>
+         <blockBackground colorName="(0.85,0.85,0.85)" start="-1,-1" stop="-1,-1"/>
+    </blockTableStyle>
+    <paraStyle name="conditions" fontName="Helvetica" fontSize="8" alignment="justify"/>
+</stylesheet>
+<story>
+    <xpre><b>Fabien Pinckaers</b>
+Rue Joseph Mathieu 28
+1300 Limal
+Tel: <i>010.68.94.39</i>
+    </xpre>
+    <nextFrame/>
+    <para>
+        <b>Project     Name</b>: <i>14AABV006 ChipTarget</i>
+       
+    </para>
+    <spacer length="1cm" width="1mm"/>
+    <para>
+        <b>Institution Name</b>: <i>14AABV006 ChipTarget</i>
+        Madame, Monsieur,
+    </para>
+    <spacer length="5mm" width="1mm"/>
+    <para>
+        Vous trouverez ci-join le devis suite a votre demande faite sur notre site.
+    </para>
+    <spacer length="1cm" width="1mm"/>
+    <blockTable colWidths="10cm,2.2cm,1.0cm,2.5cm" style="products">
+    <tr>
+        <td>Description</td><td>Prix Unit.</td><td>Qty</td><td>Prix HTVA</td>
+    </tr><tr>
+        <td>Chemises</td><td>23.00</td><td>32</td> <td>345.00</td>
+    </tr><tr>
+        <td>T-shirts</td><td>23.00</td><td>32</td> <td>345.00</td>
+    </tr><tr>
+        <td>HTVA:</td><td/><td/><td>100.00</td>
+    </tr><tr>
+        <td>TVA:</td><td/><td/><td>20.00</td>
+    </tr><tr>
+        <td>TVAC:</td><td/><td/><td>120.00</td>
+    </tr>
+    </blockTable>
+    <spacer length="1cm" width="1mm"/>
+    <para style="conditions">
+        Tout acceptation de ce devis necessite le <b>renvoi de ce dernier</b> apres avoir ete date et signe et
+        suivi des mentions suivantes : <i>"lu et approuve"</i> et <i>"bon pour accord"</i>.
+    </para>
+    <spacer length="0.5cm" width="1mm"/>
+    <para style="conditions">
+        <b>Tout contrat conclu avec notre societe est exclusivement regi par nos
+        conditions generales.</b>
+    </para>
+</story>
 </document>
