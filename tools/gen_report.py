@@ -62,7 +62,8 @@ class PDFUtils(object):
         # Read Template file
         template = preppy.getModule(templ)  
         # Render template file 
-        data.update({'STATIC_DIR': self.STATIC_DIR})
+	tdata=data
+        tdata.update({'STATIC_DIR': self.STATIC_DIR})
         print "vals:",data.values()
         # Render PDF page
         rml = template.getOutput(data)  
@@ -81,10 +82,19 @@ if __name__ == '__main__':
     #for c in cerfts:  
     pdf_path = 'report_demo.pdf' 
     # 如果PDF不存在则重新生成  
-    data = {'filename':'Report Demo.pdf','author':'Toger'}
-    data.update({'email':'hbu@localhost'})
+    data = {
+         'filename':'Report Demo.pdf',
+         'data':'Dato',
+         'company':'DT',
+	 'email':'hbu@localhost',
+	 'author':'Toger'}
+    owner = {'email':'owner@126.com'}
+    data.update({'owner':owner})
+    print "Owner email: ",data.get('owner').get('email')
     # data = 'Toger#HBU'
     if not os.path.exists(pdf_path):  
+        pdfUtils.create_pdf(data, temp_path, pdf_path)  
+    else:
         pdfUtils.create_pdf(data, temp_path, pdf_path)  
     print 'done'  
 

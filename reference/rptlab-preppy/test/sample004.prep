@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+<TITLE>ReportLab Preppy Test Suite 004</TITLE>
+</HEAD>
+
+<BODY>
+
+<FONT COLOR=#000000>
+
+<TABLE BGCOLOR=#0000CC BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100% >
+        <TR>
+        <TD>
+<FONT COLOR=#FFFFFF>
+<CENTER>
+<H1>Preppy Test 004 - Passing A Dictionary to Preppy</H1>
+</CENTER>
+</FONT>
+</TD>
+</TR>
+</TABLE>
+
+<BR>
+This test passes a dictionary to Preppy, and displays the output.
+<H2>Expected Output</H2>
+You should see a short list of song titles and who they are by.
+<BR><BR>
+<HR>
+<BR></P>
+
+<CENTER>
+<TABLE>
+<P>{{song1}}</P>
+<P>{{song2}}</P>
+</TABLE>
+</CENTER>
+
+
+<BR>
+<HR>
+
+</FONT>
+</BODY>
+</HTML>

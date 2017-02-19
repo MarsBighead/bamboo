@@ -1,0 +1,6 @@
+This tests the use of getOutputKeywords for one-line include files.
+{{script}}
+import preppy
+m2 = preppy.getModule('sample013_inner')
+{{endscript}}
+{{m2.getOutputFromKeywords(x=6,y=7)}}

@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+<TITLE>ReportLab Preppy Test Suite 005</TITLE>
+</HEAD>
+
+<BODY>
+
+<FONT COLOR=#000000>
+
+<TABLE BGCOLOR=#0000CC BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100% >
+        <TR>
+        <TD>
+<FONT COLOR=#FFFFFF>
+<CENTER>
+<H1>Preppy Test 005 - Escaping</H1>
+</CENTER>
+</FONT>
+</TD>
+</TR>
+</TABLE>
+
+<BR>
+This is a series of tests to make sure that Preppy can handle escaping the double "{" character.
+<H2>Expected Output</H2>
+You should see a number of sentences between the two lines below. Each line of text should tell you when there should be curly brackets on that line.
+<BR><BR>
+
+<HR>
+<CENTER>
+<TABLE>
+<TR><TD>
+<P>{${You should see double braces before and after this sentence, but this is not inside any tags so no big deal}$}</P>
+
+<P>
+{{script}}
+print('This sentence should have two opening braces NOW:  {${ and two closing ones NOW:  }$}.  Does it? ')
+{{endscript}}
+</P>
+
+<P>
+{{script}}
+print('This line should end in the word "endscript" with double braces around it.  Does it?  {${endscript}$} ')
+{{endscript}}
+</P>
+
+<P>
+This should have a dollar sign between two opening braces:  {$${<BR>
+This should have a dollar sign between two closing braces:  }$$}<BR>
+</P>
+
+<P>
+This should just show two open braces: {${<BR>
+This should just show two close braces: }$}<BR>
+</P>
+
+<P>
+This should just display the digit '1':  {{len({ 'a':  {'b':'c'}$})   }}  
+</P>
+
+<P>
+</P>
+</TD></TR>
+</TABLE>
+</CENTER>
+
+<HR>
+
+
+<BR>
+
+</FONT>
+</BODY>
+</HTML>

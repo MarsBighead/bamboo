@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+<TITLE>ReportLab Preppy Test Suite 003</TITLE>
+</HEAD>
+
+<BODY>
+
+<FONT COLOR=#000000>
+
+<TABLE BGCOLOR=#0000CC BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100% >
+        <TR>
+        <TD>
+<FONT COLOR=#FFFFFF>
+<CENTER>
+<H1>Preppy Test 003 - The "If" Tag</H1>
+</CENTER>
+</FONT>
+</TD>
+</TR>
+</TABLE>
+
+<BR>
+This test sets a test variable and uses the Preppy <I>if</I>, <I>else</I> and <I>elif</I> statements to make tests on it.
+
+<H2>Expected Output</H2>
+<P>You should see three sets of results. <BR>
+The first line of each result will tell you the status of the test variable, and if all is well there should be a second line in <I>italics</I> below it.</P>
+
+<BR><BR>
+<HR>
+<BR></P>
+
+<CENTER>
+<TABLE>
+{{script}}
+testVar = 10
+printstring = "The test variable is '"+ str(testVar)+"'.<BR>"
+print(printstring)
+{{endscript}}
+
+{{if testVar == 10}}
+<I>You should see this line if the test variable is equal to '10'</I>
+{{endif}}
+<BR><BR>
+
+{{script}}
+testVar = 20
+printstring = "The test variable is now '"+ str(testVar)+"'.<BR>"
+print(printstring)
+{{endscript}}
+
+{{if testVar == 10}}
+<B>You should see this if the test variable is equal to '10' - but it shouldn't be.</B>
+{{else}}
+<I>You should see this line if the test variable is <B>not</B> equal  to '10'</I>
+{{endif}}
+<BR><BR>
+
+The test variable is '{{testVar}}'<BR>
+
+{{if testVar == 10}}
+	<B>You should see this line if the test variable is equal to '10' - but it shouldn't be.</B>
+{{elif testVar == 20}}
+	<I>You should see this line if the test variable is equal  to '20'</I>
+{{endif}}
+<BR><BR>
+</TABLE>
+</CENTER>
+
+
+<BR>
+<HR>
+
+</FONT>
+</BODY>
+</HTML>

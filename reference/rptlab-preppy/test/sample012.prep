@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+<TITLE>ReportLab Preppy Test Suite 012</TITLE>
+</HEAD>
+
+<BODY>
+
+<FONT COLOR=#000000>
+
+<TABLE BGCOLOR=#0000CC BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100% >
+        <TR>
+        <TD>
+<FONT COLOR=#FFFFFF>
+<CENTER>
+<H1>Preppy Test 012 - HTML escaping all output</H1>
+</CENTER>
+</FONT>
+</TD>
+</TR>
+</TABLE>
+
+<BR>
+This prints stuff HTML escaped in all curly-brace expressions
+
+<H2>Expected Output</H2>
+
+You should see angled brackets saying "&lt;tag/&gt;"
+<BR><BR>
+<HR>
+<BR><CENTER>
+{{script}}
+stuff = "<tag/>"
+
+#set up quote function
+from xml.sax.saxutils import escape
+def __swrite__(x):
+    return __write__(escape(str(x)))
+
+{{endscript}}
+{{stuff}}
+</CENTER><BR>
+<HR>
+
+</FONT>
+</BODY>
+</HTML>

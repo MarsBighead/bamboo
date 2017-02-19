@@ -1,0 +1,39 @@
+Preppy - a PreProcessor for Python
+==================================
+
+
+Preppy is ReportLab's templating system.  It has been in continuous
+production use since 2000.
+
+It was released as open source code but never evangelized.  We are
+putting it out on PyPI now because many of our solutions depend on it,
+and this makes it a lot easier to install (e.g. with a pip
+requirements file).
+
+Preppy is a single Python module which should be placed directly on
+the path (i.e. you access it with 'import preppy').  The setup
+script does this, but it's just as effective to grab it from the
+repo and drop it into your project.
+
+Preppy aims to be absolutely minimal.   You embed Python expressions
+and control structures in your template.  It compiles the template
+into a .pyc file.  A preppy template is exactly equivalent to a Python
+function which accepts parameters and returns text output.  We don't
+both with include functions, block nesting, filters or any other fancy
+stuff, because we already have a perfectly good language to do that in.
+
+Preppy is just Python, so you get proper Python tracebacks, with the
+original line number in the .prep file; you can happily debug through
+calls to python, preppy, python and more preppy.
+
+
+Currently the docs and tests are rather old-fashioned, because this
+dates back to before the unittest module, Sphinx and so on.  We're
+working on this.  It also has 'more than one way to do things',
+which we will be simplifying and deprecating soon before making it
+available on Python 3.x.  
+
+BSD license.  See LICENSE.txt for details
+
+
+- Andy Robinson, ReportLab, March 2015

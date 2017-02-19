@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+<TITLE>ReportLab Preppy Test Suite 001</TITLE>
+</HEAD>
+
+<BODY>
+
+<FONT COLOR=#000000>
+
+<TABLE BGCOLOR=#0000CC BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100% >
+        <TR>
+        <TD>
+<FONT COLOR=#FFFFFF>
+<CENTER>
+<H1>Preppy Test 001 - "Script" Tag</H1>
+</CENTER>
+</FONT>
+</TD>
+</TR>
+</TABLE>
+
+<BR>
+This tests the script tag with a minimal snippet of Python code.
+
+<H2>Expected Output</H2>
+
+It adds 2 and 2.  you should see "4" below between the two lines.
+<BR><BR>
+<HR>
+<BR><CENTER>
+{{script}}
+print(2+2)
+{{endscript}}
+</CENTER><BR>
+<HR>
+
+</FONT>
+</BODY>
+</HTML>

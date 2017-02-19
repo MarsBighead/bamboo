@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+<TITLE>ReportLab Preppy Test Suite - Load Test 003</TITLE>
+</HEAD>
+
+<BODY>
+
+<FONT COLOR=#000000>
+
+<TABLE BGCOLOR=#0000CC BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100% >
+<TR>
+<TD>
+<FONT COLOR=#FFFFFF>
+<CENTER>
+<H1>Preppy Load Test 003 - Testing Preppy With A 10,000 Item Dictionary</H1>
+</CENTER>
+</FONT>
+</TD>
+</TR>
+</TABLE>
+
+<BR>
+This test creates a dictionary filled with <I>10,000</I> random numbers, and tests to see that Preppy can handle it.
+<H2>Expected Output</H2>
+You should see 10,000 variables listed below under the dictionary 'dictionary', all of which will be called key[number], where number is a 4 digit number between 0000 and 9999.
+<BR><BR>
+
+<HR>
+<BR><BR>
+<CENTER>
+
+<TABLE>
+<TR><TD>
+Here are the local variables available to this page:
+<BR><PRE>
+{{script}}
+for i in sorted(locals().items()):
+	print('%s=%r' % i)
+{{endscript}}
+</PRE>
+</TD></TR>
+</TABLE>
+</CENTER>
+
+<BR><BR>
+<HR>
+
+
+</FONT>
+</BODY>
+</HTML>

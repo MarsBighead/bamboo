@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="iso-8859-1" standalone="no" ?>
 <!DOCTYPE document SYSTEM "rml_1_0.dtd">
-<document filename="example_5.pdf">
+<document filename="report_demo.pdf">
 <template pageSize="(21cm, 29.7cm)" leftMargin="2.0cm" rightMargin="2.0cm"
   topMargin="2.0cm" bottomMargin="2.0cm" title="MarsBighead Report Sample" author="{{data}}" allowSplitting="20">
     <pageTemplate id="first">
         <pageGraphics>
             <lines>2cm 3.2cm 19cm 3.2cm</lines>
-            <drawCentredString x="105mm" y="3.4cm">https://github.com/MarsBighead - 02.07.2017/Shanghai.China - Toger.Me</drawCentredString>
-            <drawCentredString x="105mm" y="2.6cm">  Generate Data-{{data}} , hbu@localhost</drawCentredString>
-            <drawCentredString x="105mm" y="2.0cm"> Python tools in directory {{STATIC_DIR}} - Author:Bighead</drawCentredString>
+	    <drawCentredString x="105mm" y="3.4cm">https://github.com/MarsBighead - 02.07.2017/Shanghai.China</drawCentredString>
+            <drawCentredString x="105mm" y="2.6cm"> Generate by {{company}} , hbu@localhost</drawCentredString>
+	    <drawCentredString x="105mm" y="2.0cm"> Python tools in directory {{STATIC_DIR}} - Author:{{author}}</drawCentredString>
             <image x="23mm" y="23cm" file="pict/devis_logo.jpg"/>
 
             <setFont name="Helvetica" size="135"/>

@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+<TITLE>ReportLab Preppy Test Suite 009</TITLE>
+</HEAD>
+
+<BODY>
+
+<FONT COLOR=#000000>
+
+<TABLE BGCOLOR=#0000CC BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100% >
+<TR>
+<TD>
+<FONT COLOR=#FFFFFF>
+<CENTER>
+<H1>Preppy Test 009 - Testing Preppy With Things That Look Like Floating Point Numbers</H1>
+</CENTER>
+</FONT>
+</TD>
+</TR>
+</TABLE>
+
+<BR>
+This tests to see if Preppy can handle being passed a dictionary with keys that are actually strings, but that look like floating point numbers.
+<H2>Expected Output</H2>
+You should see four lines of text between these lines.
+<HR>
+<CENTER>
+<TABLE>
+<TR><TD>
+<PRE>
+This should print the number 1.01: {{1.01}}
+This should print the number 2.78: {{2.78}}
+<BR>
+This should print the string in key 1.01, but is still plain daft:
+    {{dictionary['1.01']}}
+This should print the string in key 2.78 and is still equally daft:
+    {{dictionary['2.78']}}
+</PRE>
+</TD></TR>
+</TABLE>
+</CENTER>
+
+<HR>
+
+</FONT>
+</BODY>
+</HTML>

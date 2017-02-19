@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+<TITLE>ReportLab Preppy Test Suite 008</TITLE>
+</HEAD>
+
+<BODY>
+
+<FONT COLOR=#000000>
+
+<TABLE BGCOLOR=#0000CC BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100% >
+<TR>
+<TD>
+<FONT COLOR=#FFFFFF>
+<CENTER>
+<H1>Preppy Test 008 - Testing Preppy With Things That Look Like Integers</H1>
+</CENTER>
+</FONT>
+</TD>
+</TR>
+</TABLE>
+
+<BR> This tests to see if Preppy can handle being passed a dictionary
+with keys that are actually strings, but that look like integers.
+Arguably every top level dictionary key should be a proper variable
+identifier and you should not use keys that evaluate to numbers
+or other Python expressions; but this at least proves it doesn't
+break.
+<H2>Expected Output</H2>
+You should see four lines of text between these lines.
+<HR>
+<CENTER>
+<TABLE>
+<TR><TD><PRE>
+This should print a 1: {{1}}
+This should print a 2: {{2}}
+<BR>
+This should print the string in key 1, but is plain daft:
+    {{dictionary['1']}}
+This should print the string in key 2 and is equally daft:
+    {{dictionary['2']}}
+</PRE>
+</TD></TR>
+</TABLE>
+</CENTER>
+
+<HR>
+
+</FONT>
+</BODY>
+</HTML>

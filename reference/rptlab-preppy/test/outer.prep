@@ -1,0 +1,8 @@
+in outer.prep
+{{for i in range(1)}}
+	before include inner i={{i}} j={{j}}
+	{{include('inner',j+'*10',i*10)}}
+	before include inner1 i={{i}} j={{j}}
+	{{include('inner1',dictionary=dict(v=i*100,w=j+'*100'))}}
+	after include inner1 i={{i}} j={{j}}
+{{endfor}}

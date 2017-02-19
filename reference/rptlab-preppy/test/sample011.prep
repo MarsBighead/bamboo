@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+<TITLE>ReportLab Preppy Test Suite 011</TITLE>
+</HEAD>
+
+<BODY>
+
+<FONT COLOR=#000000>
+
+<TABLE BGCOLOR=#0000CC BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100% >
+        <TR>
+        <TD>
+<FONT COLOR=#FFFFFF>
+<CENTER>
+<H1>Preppy Test 011 - Preppy Functions</H1>
+</CENTER>
+</FONT>
+</TD>
+</TR>
+</TABLE>
+
+<BR>
+<P>This test passes a dictionary to Preppy. The items in this dictionary have the same names as function names within Preppy.</P>
+This test does the same to Preppy's functions as the previous test did for variables.
+
+<H2>Expected Output</H2>
+You should see a long list of function names between the two lines.
+<BR><BR>
+<HR>
+<BR></P>
+
+<CENTER>
+<TABLE>
+<P>{{dictionary}}</P>
+</TABLE>
+</CENTER>
+
+
+<BR>
+<HR>
+
+</FONT>
+</BODY>
+</HTML>

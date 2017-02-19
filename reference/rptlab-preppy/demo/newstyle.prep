@@ -1,0 +1,15 @@
+{{def(name,sex)}}
+<!-- This is a 'new-style' .prep file with a function-like
+declaration at the top.  You must call the module's get()
+function, not getOutput()-->
+<html>
+    <head>
+        <title>{{name}}</title>
+    </head>
+    <body>
+    Hello. My name is {{name}} and I am
+    {{if sex=="f":}} a gal
+    {{elif sex=="m":}} a guy
+    {{else:}} neuter {{endif}}
+    </body>
+</html>

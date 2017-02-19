@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+<TITLE>ReportLab Preppy Test Suite 010</TITLE>
+</HEAD>
+
+<BODY>
+
+<FONT COLOR=#000000>
+
+<TABLE BGCOLOR=#0000CC BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100% >
+        <TR>
+        <TD>
+<FONT COLOR=#FFFFFF>
+<CENTER>
+<H1>Preppy Test 010 - Preppy Variables</H1>
+</CENTER>
+</FONT>
+</TD>
+</TR>
+</TABLE>
+
+<BR>
+<P>This test passes a dictionary to Preppy. The items in this dictionary have the same names as variables within Preppy.</P>
+This check is to see if Preppy can handle a clash between its own variable names and things that are being passed to it.
+
+<H2>Expected Output</H2>
+You should see a long list of variable names between the two lines.
+<BR><BR>
+<HR>
+<BR></P>
+
+<CENTER>
+<TABLE>
+<P>{{dictionary}}</P>
+</TABLE>
+</CENTER>
+
+
+<BR>
+<HR>
+
+</FONT>
+</BODY>
+</HTML>

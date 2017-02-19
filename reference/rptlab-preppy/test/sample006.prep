@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+<TITLE>ReportLab Preppy Test Suite 006</TITLE>
+</HEAD>
+
+<BODY>
+
+<FONT COLOR=#000000>
+
+<TABLE BGCOLOR=#0000CC BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100% >
+<TR>
+<TD>
+<FONT COLOR=#FFFFFF>
+<CENTER>
+<H1>Preppy Test 006 - Writing HTML files without writing .py files</H1>
+</CENTER>
+</FONT>
+</TD>
+</TR>
+</TABLE>
+
+<BR>
+This test should create a readable HTML file (sample006.html), without any associated Python file (sample006.py).
+<H2>Expected Output</H2>
+You are reading this HTML file, so this test worked.
+<BR><BR>
+
+<HR>
+Below is a listing of the files in the same directory as this HTML file. 'sample006.py' should <I>not</I> there.
+<BR><BR>
+<CENTER>
+<TABLE>
+{{script}}
+import os
+leftColumn = []
+rightColumn = []
+fileList = os.listdir(os.getcwd())
+for item in range(0,len(fileList),2):
+	if os.path.isfile(fileList[item]):
+		leftColumn.append(fileList[item])
+for item in range(1,len(fileList)-1,2):
+	if os.path.isfile(fileList[item]):
+		rightColumn.append(fileList[item])
+
+for loopCounter in range(0, len(leftColumn)):
+	print("<TR>\n<TD WIDTH=30%>")
+	print(leftColumn[loopCounter])
+	print("</TD>\n")
+	print("<TD WIDTH=30%>")
+	try:
+		print(rightColumn[loopCounter])
+		print("</TD></TR>")
+	except:
+		print(" ")
+		print("</TD></TR>")
+{{endscript}}
+
+</TABLE>
+</CENTER>
+
+<HR>
+
+
+<BR>
+
+</FONT>
+</BODY>
+</HTML>

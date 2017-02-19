@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+<TITLE>ReportLab Preppy Test Suite 002</TITLE>
+</HEAD>
+
+<BODY>
+
+<FONT COLOR=#000000>
+<TABLE BGCOLOR=#0000CC BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100% >
+        <TR>
+        <TD>
+<FONT COLOR=#FFFFFF>
+<CENTER>
+<H1>Preppy Test 002 - Loops in Python and Preppy Tag</H1>
+</CENTER>
+</FONT>
+</TD>
+</TR>
+</TABLE>
+
+<BR>
+This tests <I>for</I> and <I>while</I> loops as chunks of embedded Python code
+between script and endscript tags. Then it tests loops using the preppy <I>for</I> and <I>while</I>
+tags.  The output should look the same.
+
+<H2>Expected Output</H2>
+
+<P>
+You should see four sets of the numbers 1 to 10 between the lines:<BR>
+Set 1: Python 'for' loop<BR>
+Set 2: Python 'while'  loop<BR>
+Set 3: Preppy 'for' loop<BR>
+Set 4: Preppy 'while' loop<BR>
+
+<BR><BR>
+<HR>
+<BR></P>
+
+<CENTER>
+<TABLE>
+<TR><TD>
+{{script}}
+print("FOR loop between script..endscript:")
+print("</TD><TD>")
+for loopCounter in range(1,11):
+	print(loopCounter)
+print("</TD><TD>")
+print("Python FOR loop works OK\n<BR>\n")
+print("</TD>")
+print("</TR><TR>")
+print("<TD>")
+print("WHILE loop between script..endscript:")
+print("</TD><TD>")
+loopCounter = 1
+while loopCounter<11:
+	print(loopCounter)
+	loopCounter =  loopCounter+1
+print("</TD><TD>")
+print("Python WHILE loop works OK\n<BR>\n")
+{{endscript}}
+</TD></TR>
+<TR><TD>
+FOR loop in Preppy control structures: 
+</TD><TD>
+{{for loopCounter in range(1,11)}}
+	{{loopCounter}}
+{{endfor}}
+</TD><TD>
+Preppy FOR loop works OK
+</TD></TR>
+<TR><TD>
+WHILE loop in Preppy control structures: 
+</TD><TD WIDTH=30%>
+{{script}} loopCounter=1{{endscript}}
+{{while loopCounter<11}} 
+	{{loopCounter}}
+	{{script}} loopCounter = loopCounter+1{{endscript}}
+ {{endwhile}}
+</TD><TD>
+Preppy WHILE loop works OK
+</TD></TR>
+</TABLE>
+</CENTER>
+
+<BR>
+<HR>
+
+</FONT>
+</BODY>
+</HTML>
