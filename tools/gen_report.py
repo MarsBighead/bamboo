@@ -62,12 +62,10 @@ class PDFUtils(object):
         # Read Template file
         template = preppy.getModule(templ)  
         # Render template file 
-        namespace = {  
-            'data': data,  
-            'STATIC_DIR': self.STATIC_DIR,  
-            }  
+        data.update({'STATIC_DIR': self.STATIC_DIR})
+        print "vals:",data.values()
         # Render PDF page
-        rml = template.getOutput(namespace)  
+        rml = template.getOutput(data)  
         # Generate PDF  
         pdf =  trml2pdf.parseString(rml)  
         # Save to PDF  
@@ -77,14 +75,16 @@ class PDFUtils(object):
   
 if __name__ == '__main__':  
       
-    pu = PDFUtils()  
+    pdfUtils = PDFUtils()  
     # 模板页面地址  
-    temp_path =  'doc.prep'  
+    temp_path =  'report_demo.prep'  
     #for c in cerfts:  
-    pdf_path = 'doc.pdf' 
+    pdf_path = 'report_demo.pdf' 
     # 如果PDF不存在则重新生成  
-    c = 'Toger#HBU'
+    data = {'filename':'Report Demo.pdf','author':'Toger'}
+    data.update({'email':'hbu@localhost'})
+    # data = 'Toger#HBU'
     if not os.path.exists(pdf_path):  
-        pu.create_pdf(c, temp_path, pdf_path)  
+        pdfUtils.create_pdf(data, temp_path, pdf_path)  
     print 'done'  
 

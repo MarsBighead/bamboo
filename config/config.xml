@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<config version="1">
-<databases>
+<config  version="1">
+<databases title="config">
   <dbType>mysql</dbType>
   <dbName>dbsnp</dbName>
   <dbUser>hbu</dbUser>
