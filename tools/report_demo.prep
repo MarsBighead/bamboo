@@ -56,7 +56,7 @@ Tel: <i>010.68.94.39</i>
     </para>
     <spacer length="1cm" width="1mm"/>
     <para>
-        <b>Institution Name</b>: <i>14AABV006 ChipTarget</i>
+	    <b>Institution Name</b>: <b>{{company}}</b>
         Madame, Monsieur,
     </para>
     <spacer length="5mm" width="1mm"/>

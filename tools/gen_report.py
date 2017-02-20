@@ -68,6 +68,7 @@ class PDFUtils(object):
         # Render PDF page
         rml = template.getOutput(data)  
         # Generate PDF  
+	print "rml\n",rml
         pdf =  trml2pdf.parseString(rml)  
         # Save to PDF  
         open(save_file,'wb').write(pdf)  
@@ -85,12 +86,12 @@ if __name__ == '__main__':
     data = {
          'filename':'Report Demo.pdf',
          'data':'Dato',
-         'company':'DT',
+         'company': u'如果PDF不存在则重新生成  DT',
 	 'email':'hbu@localhost',
 	 'author':'Toger'}
     owner = {'email':'owner@126.com'}
     data.update({'owner':owner})
-    print "Owner email: ",data.get('owner').get('email')
+    print "Owner email: ",data['company']
     # data = 'Toger#HBU'
     if not os.path.exists(pdf_path):  
         pdfUtils.create_pdf(data, temp_path, pdf_path)  
