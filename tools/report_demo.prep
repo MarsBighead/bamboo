@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="iso-8859-1" standalone="no" ?>
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <!DOCTYPE document SYSTEM "rml_1_0.dtd">
 <document filename="report_demo.pdf">
 <template pageSize="(21cm, 29.7cm)" leftMargin="2.0cm" rightMargin="2.0cm"
@@ -11,7 +11,7 @@
 	    <drawCentredString x="105mm" y="2.0cm"> Python tools in directory {{STATIC_DIR}} - Author:{{author}}</drawCentredString>
             <image x="23mm" y="23cm" file="pict/devis_logo.jpg"/>
 
-            <setFont name="Helvetica" size="135"/>
+            <setFont name="song" size="135"/>
             <fill color="(1,0.9,0.9)"/>
             <stroke color="(1,0.9,0.9)"/>
             <translate dx="15cm" dy="-5.5cm"/>
@@ -27,7 +27,7 @@
 </template>
 <stylesheet>
     <blockTableStyle id="products">
-         <blockFont name="Helvetica-BoldOblique" size="24" start="0,0" stop="-1,0"/>
+         <blockFont name="song" size="24" start="0,0" stop="-1,0"/>
          <blockBackground colorName="grey" start="0,0" stop="-1,0"/>
          <blockTextColor colorName="white" start="0,0" stop="-1,0"/>
          <blockValign value="TOP"/>
@@ -41,7 +41,7 @@
          <lineStyle kind="LINEAFTER" colorName="black" start="-1,-1" stop="-1,-1"/>
          <blockBackground colorName="(0.85,0.85,0.85)" start="-1,-1" stop="-1,-1"/>
     </blockTableStyle>
-    <paraStyle name="conditions" fontName="Helvetica" fontSize="8" alignment="justify"/>
+    <paraStyle name="conditions" fontName="song" fontSize="8" alignment="justify"/>
 </stylesheet>
 <story>
     <xpre><b>Fabien Pinckaers</b>

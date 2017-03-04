@@ -1,5 +1,5 @@
 #!/usr/bin/python  
-# -*- coding: utf-8 -*-  
+# -*- coding: utf-8 -*- 
   
 __author__ = 'Toger'  
   
@@ -38,6 +38,7 @@ class PDFUtils(object):
         try:  
             # 注册宋体字体  
             pdfmetrics.registerFont(ttfonts.TTFont('song', os.path.join(font_dir, 'STSONG.TTF')))  
+	    # print  "###"+os.path.join(font_dir, 'STSONG.TTF') 
             # 注册宋体粗体字体  
             pdfmetrics.registerFont(ttfonts.TTFont('song_b', os.path.join(font_dir, 'STZHONGS.TTF')))  
         except:  
@@ -68,7 +69,7 @@ class PDFUtils(object):
         # Render PDF page
         rml = template.getOutput(data)  
         # Generate PDF  
-	print "rml\n",rml
+	# print "rml\n",rml
         pdf =  trml2pdf.parseString(rml)  
         # Save to PDF  
         open(save_file,'wb').write(pdf)  
@@ -86,7 +87,7 @@ if __name__ == '__main__':
     data = {
          'filename':'Report Demo.pdf',
          'data':'Dato',
-         'company': u'如果PDF不存在则重新生成  DT',
+         'company': u'如果PDF不存在则重新生成  DT'.encode('utf-8'),
 	 'email':'hbu@localhost',
 	 'author':'Toger'}
     owner = {'email':'owner@126.com'}
