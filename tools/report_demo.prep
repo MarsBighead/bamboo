@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <!DOCTYPE document SYSTEM "rml_1_0.dtd">
 <document filename="report_demo.pdf">
+{{script}}#coding=utf-8{{endscript}}
+{{script}}import locale;locale.setlocale(locale.LC_ALL,'');{{endscript}}
 <template pageSize="(21cm, 29.7cm)" leftMargin="2.0cm" rightMargin="2.0cm"
   topMargin="2.0cm" bottomMargin="2.0cm" title="MarsBighead Report Sample" author="{{data}}" allowSplitting="20">
     <pageTemplate id="first">
         <pageGraphics>
             <lines>2cm 3.2cm 19cm 3.2cm</lines>
-	    <drawCentredString x="105mm" y="3.4cm">https://github.com/MarsBighead - 02.07.2017/Shanghai.China</drawCentredString>
-            <drawCentredString x="105mm" y="2.6cm"> Generate by {{company}} , hbu@localhost</drawCentredString>
-	    <drawCentredString x="105mm" y="2.0cm"> Python tools in directory {{STATIC_DIR}} - Author:{{author}}</drawCentredString>
+            <drawCentredString x="105mm" y="2.6cm">The <pageNumber CountingFrom="1" /> page</drawCentredString>
+	    <drawCentredString x="105mm" y="1.0cm">https://github.com/MarsBighead - 03.10.2017/Shanghai.China</drawCentredString>
+	    <drawCentredString x="105mm" y="1.8cm">Author:{{author}},  Email:{{email}}</drawCentredString>
             <image x="23mm" y="23cm" file="pict/devis_logo.jpg"/>
 
             <setFont name="song" size="135"/>
@@ -27,14 +29,14 @@
 </template>
 <stylesheet>
     <blockTableStyle id="products">
-         <blockFont name="song" size="24" start="0,0" stop="-1,0"/>
+         <blockFont name="song" size="12" start="0,0" stop="-1,-1"/>
          <blockBackground colorName="grey" start="0,0" stop="-1,0"/>
          <blockTextColor colorName="white" start="0,0" stop="-1,0"/>
          <blockValign value="TOP"/>
-         <blockAlignment value="RIGHT" start="1,0" stop="-1,-1"/>
-         <blockAlignment value="RIGHT" start="0,-3" stop="-1,-1"/>
+         <blockAlignment value="LEFT" start="1,0" stop="-1,-1"/>
+         <blockAlignment value="RIGHT" start="0,-1" stop="-1,-1"/>
          <lineStyle kind="LINEBELOW" colorName="black" start="0,0" stop="-1,0"/>
-         <lineStyle kind="LINEABOVE" colorName="black" start="-1,-3" stop="-1,-3"/>
+         <lineStyle kind="LINEABOVE" colorName="black" start="-1,-1" stop="-1,-3"/>
          <lineStyle kind="LINEABOVE" colorName="black" start="-1,-1" stop="-1,-1"/>
          <lineStyle kind="LINEBELOW" colorName="black" start="-1,-1" stop="-1,-1"/>
          <lineStyle kind="LINEBEFORE" colorName="black" start="-1,-1" stop="-1,-1"/>
@@ -56,27 +58,32 @@ Tel: <i>010.68.94.39</i>
     </para>
     <spacer length="1cm" width="1mm"/>
     <para>
-	    <b>Institution Name</b>: <b>{{company}}</b>
+	    <b>Institution Name</b>: <b>{{company.encode('utf-8')}}</b>
         Madame, Monsieur,
     </para>
-    <spacer length="5mm" width="1mm"/>
+    <spacer length="50mm" width="1mm"/>
     <para>
         Vous trouverez ci-join le devis suite a votre demande faite sur notre site.
     </para>
-    <spacer length="1cm" width="1mm"/>
-    <blockTable colWidths="10cm,2.2cm,1.0cm,2.5cm" style="products">
+    <spacer length="1cm" width="5mm"/>
+    <blockTable colWidths="5cm,3.5cm,2.8cm,3.5cm" style="products">
     <tr>
-        <td>Description</td><td>Prix Unit.</td><td>Qty</td><td>Prix HTVA</td>
+        <td>Description</td>
+        <td>Prix Unit.</td>
+        <td>Qty</td>
+        <td>Prix HTVA</td>
     </tr><tr>
-        <td>Chemises</td><td>23.00</td><td>32</td> <td>345.00</td>
+        <td>Chemises</td><td>23.00</td>
+        <td>32</td> <td>345.00</td>
     </tr><tr>
         <td>T-shirts</td><td>23.00</td><td>32</td> <td>345.00</td>
     </tr><tr>
         <td>HTVA:</td><td/><td/><td>100.00</td>
     </tr><tr>
         <td>TVA:</td><td/><td/><td>20.00</td>
-    </tr><tr>
-        <td>TVAC:</td><td/><td/><td>120.00</td>
+    </tr>
+    <tr>
+        <td>TVAC:</td> <td/> <td/><td>120.00</td>
     </tr>
     </blockTable>
     <spacer length="1cm" width="1mm"/>

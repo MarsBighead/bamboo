@@ -5,10 +5,13 @@ __author__ = 'Toger'
   
   
 import os  
+import sys
+import codecs 
 import preppy  
 import logging  
 import traceback  
 import trml2pdf  
+from io import StringIO  
 #from django.conf import settings  
   
 import reportlab.lib.styles  
@@ -17,8 +20,10 @@ from reportlab.lib.fonts import addMapping
   
 operation_logger = logging.getLogger('operation')  
 bug_log = logging.getLogger('bug')  
+reload(sys)
+sys.setdefaultencoding('utf-8') 
   
-  
+print "defaults code:",(sys.getdefaultencoding())
 class PDFUtils(object):  
   
     """ PDF 生成工具类  
@@ -62,16 +67,28 @@ class PDFUtils(object):
         """  
         # Read Template file
         template = preppy.getModule(templ)  
+        print 'Is template str ',isinstance(template,str) 
+        print 'type template str ',type(template) 
         # Render template file 
-	tdata=data
+        tdata=data
         tdata.update({'STATIC_DIR': self.STATIC_DIR})
         print "vals:",data.values()
+        print 'Is tdata str ',isinstance(tdata,str) 
+        print 'type tdata str ',type(tdata) 
         # Render PDF page
         rml = template.getOutput(data)  
+        print 'type rml str ',type(rml) 
         # Generate PDF  
-	# print "rml\n",rml
-        pdf =  trml2pdf.parseString(rml)  
+        f=StringIO()
+        f.write(rml.decode('utf8'))
+        fout=open('it.rml','w')
+        fout.write(f.getvalue())
+        fout.close()
+	#print f.getvalue()
+        #t=(rml,"ascii")
+        pdf =  trml2pdf.parseString(rml.decode('utf-8')) 
         # Save to PDF  
+        print 'type pdf str ',type(pdf) 
         open(save_file,'wb').write(pdf)  
         return True  
           
@@ -84,14 +101,15 @@ if __name__ == '__main__':
     #for c in cerfts:  
     pdf_path = 'report_demo.pdf' 
     # 如果PDF不存在则重新生成  
+    owner = {'email':'owner@126.com'}
     data = {
          'filename':'Report Demo.pdf',
          'data':'Dato',
-         'company': u'如果PDF不存在则重新生成  DT'.encode('utf-8'),
+         'company': '如果PDF不存在则重新生成DT',
 	 'email':'hbu@localhost',
+	 'owner': owner,
 	 'author':'Toger'}
-    owner = {'email':'owner@126.com'}
-    data.update({'owner':owner})
+    #data.update({'owner':owner})
     print "Owner email: ",data['company']
     # data = 'Toger#HBU'
     if not os.path.exists(pdf_path):  
