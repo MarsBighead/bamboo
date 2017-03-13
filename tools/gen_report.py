@@ -93,7 +93,6 @@ if __name__ == '__main__':
     temp_path =  'aie.prep'  
     #for c in cerfts:  
     pdf_path = 'report_demo.pdf' 
-    # 如果PDF不存在则重新生成  
     owner = {'email':'owner@126.com'}
     data = {
          'filename':'Report Demo.pdf',
@@ -103,7 +102,7 @@ if __name__ == '__main__':
 	 'owner': owner,
 	 'author':'Toger'}
     #data.update({'owner':owner})
-    print "Owner email: ",data['company']
+    print "Put data is: ",data
     # data = 'Toger#HBU'
     if not os.path.exists(pdf_path):  
         pdfUtils.create_pdf(data, temp_path, pdf_path)  
