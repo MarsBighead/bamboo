@@ -79,14 +79,7 @@ class PDFUtils(object):
         rml = template.getOutput(data)  
         print 'type rml str ',type(rml) 
         # Generate PDF  
-        f=StringIO()
-        f.write(rml.decode('utf8'))
-        fout=open('it.rml','w')
-        fout.write(f.getvalue())
-        fout.close()
-	#print f.getvalue()
-        #t=(rml,"ascii")
-        pdf =  trml2pdf.parseString(rml.decode('utf-8')) 
+        pdf =  trml2pdf.parseString(rml) 
         # Save to PDF  
         print 'type pdf str ',type(pdf) 
         open(save_file,'wb').write(pdf)  
@@ -97,7 +90,7 @@ if __name__ == '__main__':
       
     pdfUtils = PDFUtils()  
     # 模板页面地址  
-    temp_path =  'report_demo.prep'  
+    temp_path =  'aie.prep'  
     #for c in cerfts:  
     pdf_path = 'report_demo.pdf' 
     # 如果PDF不存在则重新生成  
