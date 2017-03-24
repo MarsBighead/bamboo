@@ -58,7 +58,7 @@ Tel: <i>010.68.94.39</i>
     </para>
     <spacer length="1cm" width="1mm"/>
     <para style="conditions">
-	    <b>Institution Name</b>: <b>{{company)}}</b>
+	    <b>Institution Name</b>: <b>{{company}}</b>
         Madame, Monsieur,
     </para>
     <spacer length="50mm" width="1mm"/>
