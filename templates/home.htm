@@ -1,0 +1,28 @@
+{% include "head.html" %}
+
+  <body>
+    
+    <div class="col-sm-8 col-sm-offset-2">
+      <div class="jumbotron text-center">
+        <h1>mProbe Analytics Platform Authentication</h1>
+        <p class="lead">Simple authentication test built with express, node & passport.</p>
+
+        <a href="/login" class="btn btn-default"><span class="fa fa-sign-in"></span> Login</a>
+        <a href="/signup" class="btn btn-default"><span class="fa fa-user"></span> Signup</a>
+        <a href="/auth/facebook" class="btn btn-primary"><span class="fa fa-facebook"></span> Facebook</a>
+        <!--<a href="/auth/twitter" class="btn btn-info"><span class="fa fa-twitter"></span> Twitter</a>-->
+        <a href="/auth/google" class="btn btn-danger"><span class="fa fa-google-plus"></span> Google</a>
+
+      </div>
+
+      <div>
+        <a href="https://github.com/MarsBighead" class="fl logo" title="Mars&&Tac">
+          {% load staticfiles %}
+          <img src="{% static "/logo.png" %}" alt="Mars&Tac Union">
+        </a>
+        <p>Mars.Bighead && Tac. © 2016</p>
+      </div>
+      
+    </div>
+  </body>
+</html>
