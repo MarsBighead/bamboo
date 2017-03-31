@@ -11,7 +11,7 @@
             <drawCentredString x="105mm" y="2.6cm">The <pageNumber CountingFrom="1" /> page</drawCentredString>
 	    <drawCentredString x="105mm" y="1.0cm">https://github.com/MarsBighead - 03.10.2017/Shanghai.China</drawCentredString>
 	    <drawCentredString x="105mm" y="1.8cm">Author:{{author}},  Email:{{email}}</drawCentredString>
-            <image x="23mm" y="23cm" file="pict/devis_logo.jpg"/>
+            <image x="23mm" y="23cm" file="res/@100x150_bamboo.png"/>
 
             <setFont name="song" size="135"/>
             <fill color="(1,0.9,0.9)"/>
@@ -52,9 +52,11 @@ Rue Joseph Mathieu 28
 Tel: <i>010.68.94.39</i>
     </xpre>
     <nextFrame/>
-    <para>
-        <b>Project     Name</b>: <i>14AABV006 ChipTarget</i>
-       
+    <para style="conditions">
+        <b>项目编号:</b> <i>14AABV006</i>
+        <b>项目名称:</b> <i>捕获产物二代测序上样 ChipTarget</i>
+        <b>客户单位:</b> <i>复旦大学遗传所</i>
+        <b>报告日期:</b> <i>2017-03-31</i>
     </para>
     <spacer length="1cm" width="1mm"/>
     <para style="conditions">
@@ -62,8 +64,27 @@ Tel: <i>010.68.94.39</i>
         Madame, Monsieur,
     </para>
     <spacer length="50mm" width="1mm"/>
-    <para>
+    <para style="conditions">
+        1、技术方案流程
         Vous trouverez ci-join le devis suite a votre demande faite sur notre site.
+2、实验试剂与仪器
+试剂：	TruSeq DNA sample Preparation kit
+Agilent Custom sureselect Enrichment Kit
+TruSeq PE Cluster Kit v2 – cBot - GA
+TruSeq SBS Kit v5 – GA
+QIAquick PCR Purification kit
+QIAquick Gel Extraction kit
+NEBNext dsDNA Fragmentase
+仪器：	AB 2720 Thermal Cycler
+XiangYi H1650-W 离心机
+Vortex
+Gel electrophoresis
+NanoDrop
+Ambion Magnetic Stand
+Invitrogen Qbit Spectrophotometer
+Illumina cbot Cluster Station
+Illumina Genome Analyzer IIx
+
     </para>
     <spacer length="1cm" width="5mm"/>
     <blockTable colWidths="5cm,3.5cm,2.8cm,3.5cm" style="products">

@@ -90,7 +90,7 @@ if __name__ == '__main__':
       
     pdfUtils = PDFUtils()  
     # 模板页面地址  
-    temp_path =  'err_report.prep'  
+    temp_path =  'demo.prep'  
     #for c in cerfts:  
     pdf_path = 'report_demo.pdf' 
     owner = {'email':'owner@126.com'}
