@@ -7,10 +7,9 @@
   topMargin="2.0cm" bottomMargin="2.0cm" title="MarsBighead Report Sample" author="{{data}}" allowSplitting="20">
     <pageTemplate id="first">
         <pageGraphics>
-            <lines>2cm 3.2cm 19cm 3.2cm</lines>
-            <drawCentredString x="105mm" y="2.6cm">The <pageNumber CountingFrom="1" /> page</drawCentredString>
-	    <drawCentredString x="105mm" y="1.0cm">https://github.com/MarsBighead - 03.10.2017/Shanghai.China</drawCentredString>
-	    <drawCentredString x="105mm" y="1.8cm">Author:{{author}},  Email:{{email}}</drawCentredString>
+            <lines>2cm 2.4cm 19cm 2.4cm</lines>
+            <drawCentredString x="105mm" y="1.7cm">The <pageNumber CountingFrom="1" /> page</drawCentredString>
+	        <drawCentredString x="105mm" y="1.0cm">https://github.com/MarsBighead - 03.10.2017/Shanghai.China</drawCentredString>
             <image x="23mm" y="23cm" file="res/@100x150_bamboo.png"/>
 
             <setFont name="song" size="135"/>
@@ -46,45 +45,40 @@
     <paraStyle name="conditions" fontName="song" fontSize="8" alignment="justify"/>
 </stylesheet>
 <story>
-    <xpre><b>Fabien Pinckaers</b>
-Rue Joseph Mathieu 28
-1300 Limal
-Tel: <i>010.68.94.39</i>
+    <xpre>
+        <b>Author : {{author}}</b>
+        Email     : {{email}}
+        Address : 1300 Limal, Mars
+        Tel         : <i>010.68.94.39</i>
     </xpre>
     <nextFrame/>
     <para style="conditions">
-        <b>项目编号:</b> <i>14AABV006</i>
-        <b>项目名称:</b> <i>捕获产物二代测序上样 ChipTarget</i>
-        <b>客户单位:</b> <i>复旦大学遗传所</i>
-        <b>报告日期:</b> <i>2017-03-31</i>
+        <b>项目编号:</b> <i>14AABV006</i><br/>
+        <b>项目名称:</b> <i>捕获产物二代测序上样 ChipTarget</i><br/>
+        <b>客户单位:</b> <i>复旦大学遗传所</i><br/>
+        <b>报告日期:</b> <i>2017-03-31</i><br/>
     </para>
-    <spacer length="1cm" width="1mm"/>
+    <spacer length="5mm" width="1mm"/>
     <para style="conditions">
-	    <b>Institution Name</b>: <b>{{company}}</b>
-        Madame, Monsieur,
-    </para>
-    <spacer length="50mm" width="1mm"/>
-    <para style="conditions">
-        1、技术方案流程
-        Vous trouverez ci-join le devis suite a votre demande faite sur notre site.
-2、实验试剂与仪器
-试剂：	TruSeq DNA sample Preparation kit
-Agilent Custom sureselect Enrichment Kit
-TruSeq PE Cluster Kit v2 – cBot - GA
-TruSeq SBS Kit v5 – GA
-QIAquick PCR Purification kit
-QIAquick Gel Extraction kit
-NEBNext dsDNA Fragmentase
-仪器：	AB 2720 Thermal Cycler
-XiangYi H1650-W 离心机
-Vortex
-Gel electrophoresis
-NanoDrop
-Ambion Magnetic Stand
-Invitrogen Qbit Spectrophotometer
-Illumina cbot Cluster Station
-Illumina Genome Analyzer IIx
-
+        <b>1、技术方案流程</b><br/>
+        Vous trouverez ci-join le devis suite a votre demande faite sur notre site.<br/>
+        <b>2、实验试剂与仪器</b><br/>
+            试剂：	TruSeq DNA sample Preparation kit<br/>
+            Agilent Custom sureselect Enrichment Kit<br/>
+            TruSeq PE Cluster Kit v2 – cBot - GA<br/>
+            TruSeq SBS Kit v5 – GA<br/>
+            QIAquick PCR Purification kit<br/>
+            QIAquick Gel Extraction kit<br/>
+            NEBNext dsDNA Fragmentase<br/>
+            仪器：	AB 2720 Thermal Cycler<br/>
+            XiangYi H1650-W 离心机<br/>
+            Vortex<br/>
+            Gel electrophoresis<br/>
+            NanoDrop<br/>
+            Ambion Magnetic Stand<br/>
+            Invitrogen Qbit Spectrophotometer<br/>
+            Illumina cbot Cluster Station<br/>
+            Illumina Genome Analyzer IIx<br/>
     </para>
     <spacer length="1cm" width="5mm"/>
     <blockTable colWidths="5cm,3.5cm,2.8cm,3.5cm" style="products">
@@ -109,11 +103,55 @@ Illumina Genome Analyzer IIx
     </blockTable>
     <spacer length="1cm" width="1mm"/>
     <para style="conditions">
-        Tout acceptation de ce devis necessite le <b>renvoi de ce dernier</b> apres avoir ete date et signe et
-        suivi des mentions suivantes : <i>"lu et approuve"</i> et <i>"bon pour accord"</i>.
+       <b>1、数据质量统计</b><br/><br/>
+          数据质量的统计分为 3 部分内容,平均覆盖深度、2X~30X 平均
+          碱基覆盖深度、富集效率及大于 2X 覆盖深度片段比例。<br/>
+          Tout acceptation de ce devis necessite le <b>renvoi de ce dernier</b> apres avoir ete date et signe et
+          suivi des mentions suivantes : <i>"lu et approuve"</i> et <i>"bon pour accord"</i>.
     </para>
     <spacer length="0.5cm" width="1mm"/>
     <para style="conditions">
+    <b>(四)所用软件及方法</b><br/><br/>
+        我们使用 VARSCAN GATK[1], PICARD 以及 SAMTOOLS 这些方法以及软
+        件构建的 PIPELINE 分析样本中基因的突变位点,其具体包括:<br/><br/>
+        1)将 SAM 文件转换成合适的 BAM 文件;<br/>
+        2)去除掉 MAPPING 文件中的 DUPLICATES;<br/>
+        3)针对 INDEL 进行局部区域的再定位(LOCAL ALIGNMENT AROUND<br/>
+        INDELS);<br/>
+        4 )重新加权计算碱基质量从而取消测序质量等因素的影响<br/>
+        (RECALIBRATION OF BASE QUALITY);<br/>
+        5)寻找突变体(VARIANT CALLING)。<br/>
+        之后对于所产生的突变体进行深入分析,包括突变类型,突变位置和<br/>
+        在基因组上的位置以及分类等,这些功能分析运用了 ANNOVAR[3]软<br/>
+        件。<br/><br/>
+        PICARD(VERSION:1.49)的参数为:<br/>
+        FIXMATEINFORMATION.JAR<br/>
+        SO=COORDINATE<br/>
+        VALIDATION_STRINGENCY=SILENT<br/>
+        MARKDUPLICATES.JAR<br/>
+        REMOVE_DUPLICATES=TRUE<br/>
+        ASSUME_SORTED=FALSE VALIDATION_STRINGENCY=SILENT<br/>
+        GATK (VERSION: 1.1) [1] 主要用到的参数为:<br/>
+        -T REALIGNERTARGETCREATOR;INDELREALIGNER;COUNTCOVARIATES;<br/>
+        TABLERECALIBRATION;UNIFIEDGENOTYPER<br/>
+        -RECALFILE --DEFAULT_PLATFORM ILLUMINA<br/>
+        -COV<br/>
+        READGROUPCOVARIATE<br/>
+        -COV<br/>
+        QUALITYSCORECOVARIATE<br/>
+        -COV<br/>
+        DINUCCOVARIATE -COV CYCLECOVARIATE<br/>
+        VARSCAN(VERSION:2.3)主要参数为:<br/>
+        --MIN-COVERAGE 3<br/>
+        --MIN-READS2 2<br/>
+        --MIN-VAR-FREQ 0.1<br/>
+        --P-VALUE 1.0<br/>
+        ANNOVAR (VERSION: 2011Nov20) [2] 主要参数 :<br/>
+        CONVERT2ANNOVAR.PL -FORMAT VCF4<br/>
+        ANNOTATE_VARIATION.PL -FILTER -DBTYPE SNP132 -BUILDVER HG19<br/>
+        ANNOTATE_VARIATION.PL<br/>
+        -FILTER<br/>
+        -BUILDVER HG19<br/>
         <b>Tout contrat conclu avec notre societe est exclusivement regi par nos
         conditions generales.</b>
     </para>

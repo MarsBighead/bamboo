@@ -67,21 +67,17 @@ class PDFUtils(object):
         """  
         # Read Template file
         template = preppy.getModule(templ)  
-        print 'Is template str ',isinstance(template,str) 
-        print 'type template str ',type(template) 
+        #print 'Is template str ',isinstance(template,str) 
+        #print 'type template str ',type(template) 
         # Render template file 
         tdata=data
         tdata.update({'STATIC_DIR': self.STATIC_DIR})
-        print "vals:",data.values()
-        print 'Is tdata str ',isinstance(tdata,str) 
-        print 'type tdata str ',type(tdata) 
+        # print "vals:",data.values()
         # Render PDF page
         rml = template.getOutput(data)  
-        print 'type rml str ',type(rml) 
         # Generate PDF  
         pdf =  trml2pdf.parseString(rml) 
         # Save to PDF  
-        print 'type pdf str ',type(pdf) 
         open(save_file,'wb').write(pdf)  
         return True  
           
@@ -101,8 +97,7 @@ if __name__ == '__main__':
 	 'email':'hbu@localhost',
 	 'owner': owner,
 	 'author':'Toger'}
-    #data.update({'owner':owner})
-    print "Put data is: ",data
+    #print "Put data is: ",data
     # data = 'Toger#HBU'
     if not os.path.exists(pdf_path):  
         pdfUtils.create_pdf(data, temp_path, pdf_path)  
