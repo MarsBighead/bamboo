@@ -17,7 +17,8 @@ from django.conf.urls import include, url
 from pms import views
 
 app_name = 'pms'
-# ex: /polls/
+
 urlpatterns = [
-    url(r'^$',views.home, name= 'home'),
+    url(r'^$|^home$|^index$',views.home, name= 'home'),
 ]
+

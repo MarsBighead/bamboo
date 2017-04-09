@@ -24,7 +24,7 @@ admin.autodiscover()
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^|/|/home/index', views.home),
+    url(r'^$|^home$|^index$', views.home),
     url(r'^pms/', include('pms.urls')),
 ]
 urlpatterns+=static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
