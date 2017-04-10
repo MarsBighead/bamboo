@@ -23,5 +23,11 @@ urlpatterns = [
     url(r'^index.html$|^index.htm$',views.index, name= 'index'),
     url(r'^index2.html$|^index2.htm$',views.index2, name= 'index2'),
     url(r'^index3.html$|^index3.htm$',views.index3, name= 'index3'),
+    url(r'^form.html$|^form.htm$',views.form, name= 'form'),
+    url(r'^form_buttons.html$|^form_buttons.htm$',views.form_buttons, name= 'form_buttons'),
+    url(r'^form_upload.html$|^form_upload.htm$',views.form_upload, name= 'form_upload'),
+    url(r'^form_wizards.html$|^form_wizards.htm$',views.form_wizards, name= 'form_wizards'),
+    url(r'^form_validation.html$|^form_validation.htm$',views.form_validation, name= 'form_validation'),
+    url(r'^form_advanced.html$|^form_advanced.htm$',views.form_advanced, name= 'form_advanced'),
 ]
 
