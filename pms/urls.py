@@ -20,5 +20,8 @@ app_name = 'pms'
 
 urlpatterns = [
     url(r'^$|^home$|^index$',views.home, name= 'home'),
+    url(r'^index.html$|^index.htm$',views.index, name= 'index'),
+    url(r'^index2.html$|^index2.htm$',views.index2, name= 'index2'),
+    url(r'^index3.html$|^index3.htm$',views.index3, name= 'index3'),
 ]
 
