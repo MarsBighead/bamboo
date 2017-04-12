@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
+
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
@@ -8,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Bamboo PMS</title>
+    <title>Gentellela Alela! | </title>
 
     <!-- Bootstrap -->
     <link href="{% static "vendors/bootstrap/dist/css/bootstrap.min.css" %}" rel="stylesheet">
@@ -16,6 +17,8 @@
     <link href="{% static "vendors/font-awesome/css/font-awesome.min.css" %}" rel="stylesheet">
     <!-- NProgress -->
     <link href="{% static "vendors/nprogress/nprogress.css" %}" rel="stylesheet">
+    <!-- Dropzone.js" %} -->
+    <link href="{% static "vendors/dropzone/dist/min/dropzone.min.css" %}" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="{% static "build/css/custom.min.css" %}" rel="stylesheet">
@@ -27,7 +30,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Bamboo PMS</span></a>
+              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentellela Alela!</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -204,7 +207,7 @@
                   <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
                     <li>
                       <a>
-                        <span class="image"><img src="{% static "images/img.jpg" %}"  alt="Profile Image" /></span>
+                        <span class="image"><img src="{% static "images/img.jpg" %}" alt="Profile Image" /></span>
                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
@@ -271,7 +274,7 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Plain Page</h3>
+                <h3>Form Upload </h3>
               </div>
 
               <div class="title_right">
@@ -292,7 +295,7 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Plain Page</h2>
+                    <h2>Dropzone multiple file uploader</h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -311,7 +314,12 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                      Add content to the page ...
+                    <p>Drag multiple files to the box below for multi upload or click to select files. This is for demonstration purposes only, the files are not uploaded to any server.</p>
+                    <form action="form_upload.html" class="dropzone"></form>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                   </div>
                 </div>
               </div>
@@ -337,10 +345,11 @@
     <script src="{% static "vendors/bootstrap/dist/js/bootstrap.min.js" %}"></script>
     <!-- FastClick -->
     <script src="{% static "vendors/fastclick/lib/fastclick.js" %}"></script>
-
     <!-- NProgress -->
     <script src="{% static "vendors/nprogress/nprogress.js" %}"></script>
-    
+    <!-- Dropzone.js" %} -->
+    <script src="{% static "vendors/dropzone/dist/min/dropzone.min.js" %}"></script>
+
     <!-- Custom Theme Scripts -->
     <script src="{% static "build/js/custom.min.js" %}"></script>
   </body>
