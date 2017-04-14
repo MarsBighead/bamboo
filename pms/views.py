@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
 from django.http import HttpResponse
 from pms.models import Report 
 from datetime import datetime
@@ -81,6 +81,9 @@ def fixed_sidebar(request):
 
 def tables(request):
     return render(request, "gentelella/tables.htm", {'current_time':datetime.now()})
+
+def demo_api(request):
+    return render_to_response( 'demo_api.xml', content_type ="application/xml" ) 
 
 def tables_dynamic(request):
     return render(request, "gentelella/tables_dynamic.htm", {'current_time':datetime.now()})

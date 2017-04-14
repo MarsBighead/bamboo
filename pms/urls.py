@@ -58,5 +58,6 @@ urlpatterns = [
     url(r'^fixed_sidebar.html$|^fixed_sidebar.htm$',views.fixed_sidebar, name= 'fixed_sidebar'),
     url(r'^tables.html$|^tables.htm$',views.tables, name= 'tables'),
     url(r'^tables_dynamic.html$|^tables_dynamic.htm$',views.tables_dynamic, name= 'tables_dynamic'),
+    url(r'^demo_api$',views.demo_api, name= 'demo_api'),
 ]
 
