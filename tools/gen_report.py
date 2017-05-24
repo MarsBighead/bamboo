@@ -31,7 +31,7 @@ class PDFUtils(object):
     将一个标准的RML文件正常解析为PDF文件，保存并返回。具体参数如下"""  
   
     def __init__(self, font_dir='/usr/share/fonts/Windows/',  
-            static_dir='/home/hbu/bamboo/tools'):  
+        static_dir='/home/hbu/bamboo/tools'):  
         """ 构造方法 
  
         @param font_dir 需要注册的字体文件目录 
