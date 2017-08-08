@@ -2,6 +2,7 @@ from django.shortcuts import render, render_to_response
 from django.http import HttpResponse
 from pms.models import Report 
 from datetime import datetime
+import json
 
 # Create your views here.
 def index(request):
@@ -84,6 +85,17 @@ def tables(request):
 
 def demo_api(request):
     return render_to_response( 'demo_api.xml', content_type ="application/xml" ) 
+
+def demo_json(request):
+    owner = {'email':'owner@126.com'}
+    data = {
+         'filename':'Report Demo.pdf',
+         'data':'Dato',
+	 'email':'hbu@localhost',
+	 'owner': owner,
+	 'author':'Toger'}
+    response_data=json.dumps(data,indent=4)
+    return HttpResponse(response_data, content_type="application/json")  
 
 def tables_dynamic(request):
     return render(request, "gentelella/tables_dynamic.htm", {'current_time':datetime.now()})

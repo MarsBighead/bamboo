@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from pms import views
+import json
 
 app_name = 'pms'
 
@@ -59,5 +60,6 @@ urlpatterns = [
     url(r'^tables.html$|^tables.htm$',views.tables, name= 'tables'),
     url(r'^tables_dynamic.html$|^tables_dynamic.htm$',views.tables_dynamic, name= 'tables_dynamic'),
     url(r'^demo_api$',views.demo_api, name= 'demo_api'),
+    url(r'^demo.json$',views.demo_json, name= 'demo_json'),
 ]
 
